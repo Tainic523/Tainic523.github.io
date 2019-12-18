@@ -236,14 +236,20 @@
     <div class="card-content">
         <h3 class="title is-5 has-text-weight-normal">评论</h3>
         
-<div id="disqus_thread">
-    
-    <div class="notification is-danger">
-        You forgot to set the <code>shortname</code> for Disqus. Please set it in <code>_config.yml</code>.
-    </div>
-    
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
-</div>
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: '2OdFBx4ljazwCTznukTtrWzR-gzGzoHsz',
+        app_key: 'FnQqus3pujVuxOj9sjfXBgsm',
+        placeholder: 'go go  go'
+    });
+</script>
+
     </div>
 </div>
 </div>

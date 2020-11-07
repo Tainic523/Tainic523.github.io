@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;tainic523.github.io&#x2F;images&#x2F;og_image.png">
 <meta property="article:published_time" content="2020-11-07T07:10:05.753Z">
-<meta property="article:modified_time" content="2020-11-07T07:35:57.420Z">
+<meta property="article:modified_time" content="2020-11-07T07:52:54.820Z">
 <meta property="article:author" content="Tainic-Kang">
 <meta property="article:tag" content="Elasticsearch">
 <meta property="article:tag" content="kibana">
@@ -147,7 +147,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    11 分钟 读完 (大约 1577 个字)
+                    11 分钟 读完 (大约 1613 个字)
                 </span>
                 
                 
@@ -168,10 +168,10 @@
             <p>概述：windows下 Elasticsearch  以及其可视化使用工具Kibana和elasticsearch-head的环境搭建</p>
 <a id="more"></a>
 
-<h2 id="一：背景知识"><a href="#一：背景知识" class="headerlink" title="一：背景知识"></a>一：背景知识</h2><h2 id="1：Elasticsearch-ES"><a href="#1：Elasticsearch-ES" class="headerlink" title="1：Elasticsearch (ES)"></a>1：Elasticsearch (ES)</h2><p> 是一个分布式、高扩展、高实时的搜索与数据分析引擎。它能很方便的使大量数据具有搜索、分析和探索的能力。充分利用Elasticsearch的水平伸缩性，能使数据在生产环境变得更有价值。Elasticsearch 的实现原理主要分为以下几个步骤，首先用户将数据提交到Elasticsearch 数据库中，再通过分词控制器去将对应的语句分词，将其权重和分词结果一并存入数据，当用户搜索数据时候，再根据权重将结果排名，打分，再将返回结果呈现给用户。</p>
+<h2 id="一：背景知识"><a href="#一：背景知识" class="headerlink" title="一：背景知识"></a>一：背景知识</h2><h2 id="1：Elasticsearch-ES"><a href="#1：Elasticsearch-ES" class="headerlink" title="1：Elasticsearch (ES)"></a>1：Elasticsearch (ES)</h2><p><a href="https://www.elastic.co/cn/elasticsearch/" target="_blank" rel="noopener">Elasticsearch</a>是一个分布式、高扩展、高实时的搜索与数据分析引擎。它能很方便的使大量数据具有搜索、分析和探索的能力。充分利用Elasticsearch的水平伸缩性，能使数据在生产环境变得更有价值。Elasticsearch 的实现原理主要分为以下几个步骤，首先用户将数据提交到Elasticsearch 数据库中，再通过分词控制器去将对应的语句分词，将其权重和分词结果一并存入数据，当用户搜索数据时候，再根据权重将结果排名，打分，再将返回结果呈现给用户。</p>
 <p>简单来说，Elasticsearch是一个高性能，分布式，高拓展的搜索引擎，提供了比传统数据库更加多样化的数据检索方式，并且在海量数据的情况下Elasticsearch的数据搜索速度远超于传统数据库。</p>
-<h2 id="2：Kibana"><a href="#2：Kibana" class="headerlink" title="2：Kibana"></a>2：Kibana</h2><p> 是一个免费且开放的用户界面，能够对 Elasticsearch 数据进行可视化，可以对Elasticsearch进行数据查询，工作中常用到的就是Kibana的 Dev Tools，Dev Tools可以对查询语句进行语法提示，并且会记录历史输入，可以提高工作效率。</p>
-<h2 id="3：elasticsearch-head"><a href="#3：elasticsearch-head" class="headerlink" title="3：elasticsearch-head"></a>3：elasticsearch-head</h2><p> 和Kibana类似，也是提供了对Elasticsearch进行操作的各种工具，可以清晰的看清Elasticsearch的集群，索引，以及索引的mapping信息，直观的观察集群的负载和健康情况。</p>
+<h2 id="2：Kibana"><a href="#2：Kibana" class="headerlink" title="2：Kibana"></a>2：Kibana</h2><p><a href="https://www.elastic.co/cn/kibana" target="_blank" rel="noopener">Kibana</a>是一个免费且开放的用户界面，能够对 Elasticsearch 数据进行可视化，可以对Elasticsearch进行数据查询，工作中常用到的就是Kibana的 Dev Tools，Dev Tools可以对查询语句进行语法提示，并且会记录历史输入，可以提高工作效率。</p>
+<h2 id="3：elasticsearch-head"><a href="#3：elasticsearch-head" class="headerlink" title="3：elasticsearch-head"></a>3：elasticsearch-head</h2><p><a href="http://mobz.github.io/elasticsearch-head/" target="_blank" rel="noopener">elasticsearch-head</a>和Kibana类似，也是提供了对Elasticsearch进行操作的各种工具，可以清晰的看清Elasticsearch的集群，索引，以及索引的mapping信息，直观的观察集群的负载和健康情况。</p>
 <h2 id="二：环境搭建"><a href="#二：环境搭建" class="headerlink" title="二：环境搭建"></a>二：环境搭建</h2><h2 id="1：安装JDK和Node-js"><a href="#1：安装JDK和Node-js" class="headerlink" title="1：安装JDK和Node.js"></a>1：安装JDK和Node.js</h2><h3 id="1-1：-jdk安装"><a href="#1-1：-jdk安装" class="headerlink" title="1.1： jdk安装"></a>1.1： jdk安装</h3><p>因为ES是使用java实现的，因此需要安装jdk，推荐jdk1.8版本，网上一大堆教程，很简单。安装完之后验证一下就可以。</p>
 <p><img src="/gallary/es/1.png" alt></p>
 <h3 id="1-2：Node-js安装"><a href="#1-2：Node-js安装" class="headerlink" title="1.2：Node.js安装"></a>1.2：Node.js安装</h3><p>Node.js下载连接：<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/</a></p>
@@ -212,19 +212,21 @@
 <p>然后本地访问 <a href="http://localhost:5601" target="_blank" rel="noopener">http://localhost:5601</a> ，出现如下界面。</p>
 <p><img src="/gallary/es/14.png" alt></p>
 <h2 id="4：安装elasticsearch-head"><a href="#4：安装elasticsearch-head" class="headerlink" title="4：安装elasticsearch-head"></a>4：安装elasticsearch-head</h2><p>4.1 chrome插件安装方式</p>
-<p>chrome的插件商店提供了</p>
-<p>，如果可以翻墙的话直接在谷歌商店下载即可。</p>
+<p>chrome的插件商店提供了<a href="https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm/" target="_blank" rel="noopener">elasticsearch-head</a>，如果可以翻墙的话直接在谷歌商店下载然后安装即可。</p>
 <p>4.2 手动添加chrome插件方式</p>
 <p>如果没办法翻墙的话也可以在github下载，因为这个插件是开源的，可以下载之后在chrome上通过拓展插件的方式安装成功。</p>
 <p>下载地址：<a href="https://github.com/mobz/elasticsearch-head/blob/master/crx/es-head.crx" target="_blank" rel="noopener">https://github.com/mobz/elasticsearch-head/blob/master/crx/es-head.crx</a></p>
-<p>下载到本地之后要先将文件改为以rar结尾的文件，然后再解压到文件夹下。</p>
+<p>下载到本地之后如果直接将crx文件拖拽到Chrome会不能使用，告诉你非Chrome来源的。</p>
+<p><img src="/gallary/es/27.png" alt></p>
+<p>要先将crx文件改为以rar结尾的文件，然后再解压到文件夹下。</p>
 <p><img src="/gallary/es/15.png" alt></p>
-<p>再通过Chrome“加载已解压的扩展程序”按钮加入文件夹就可以使用了。如果直接拖拽到Chrome会不能使用，告诉你非Chrome来源的。</p>
+<p>再通过Chrome“加载已解压的扩展程序”按钮加入文件夹就可以使用了。</p>
+<p><img src="/gallary/es/28.png" alt></p>
+<p>添加完毕之后插件列表里会有一个这样的标志。</p>
 <p><img src="/gallary/es/16.png" alt></p>
 <h2 id="三：简单使用"><a href="#三：简单使用" class="headerlink" title="三：简单使用"></a>三：简单使用</h2><h2 id="1：Kibana"><a href="#1：Kibana" class="headerlink" title="1：Kibana"></a>1：Kibana</h2><h3 id="1-1：导入测试数据"><a href="#1-1：导入测试数据" class="headerlink" title="1.1：导入测试数据"></a>1.1：导入测试数据</h3><p>首次进入到kibana的界面会提示导入一些由kibana提供样本数据，可以选择把三个样本数据都导入，基本上包含了ES中常用到的数据类型，可以不用自己再构造测试数据了。</p>
 <p><img src="/gallary/es/18.png" alt></p>
-<h3 id="1-2：Dev-Tools使用"><a href="#1-2：Dev-Tools使用" class="headerlink" title="1.2：Dev Tools使用"></a>1.2：Dev Tools使用</h3><p>kibana左侧选择dev tools 就可以使用kibana提供册查询工具，自带语法提示，能够很大提升工作效率。尤其是在构思一些DSL语句的时候，能够提供很大的帮助。此外，ES的</p>
-<p>也是很好的参考手册。</p>
+<h3 id="1-2：Dev-Tools使用"><a href="#1-2：Dev-Tools使用" class="headerlink" title="1.2：Dev Tools使用"></a>1.2：Dev Tools使用</h3><p>kibana左侧选择dev tools 就可以使用kibana提供册查询工具，自带语法提示，能够很大提升工作效率。尤其是在构思一些DSL语句的时候，能够提供很大的帮助。此外，ES的<a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.8/elasticsearch-intro.html" target="_blank" rel="noopener">官方文档</a>也是很好的参考手册。</p>
 <p><img src="/gallary/es/19.png" alt></p>
 <p>查看集群的索引情况</p>
 <p><img src="/gallary/es/20.png" alt></p>

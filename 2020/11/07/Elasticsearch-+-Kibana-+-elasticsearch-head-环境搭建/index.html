@@ -13,13 +13,13 @@
     <meta name="description" content="概述：Elasticsearch  以及其可视化使用工具Kibana和elasticsearch-head的环境搭建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Elasticsearch + Kibana + elasticsearch-head 环境搭建">
-<meta property="og:url" content="https:&#x2F;&#x2F;tainic523.github.io&#x2F;2020&#x2F;11&#x2F;07&#x2F;windows%E4%B8%8B-Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;tainic523.github.io&#x2F;2020&#x2F;11&#x2F;07&#x2F;Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA&#x2F;index.html">
 <meta property="og:site_name" content="Tainic">
 <meta property="og:description" content="概述：Elasticsearch  以及其可视化使用工具Kibana和elasticsearch-head的环境搭建">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;tainic523.github.io&#x2F;images&#x2F;og_image.png">
 <meta property="article:published_time" content="2020-11-07T07:10:05.753Z">
-<meta property="article:modified_time" content="2020-11-07T07:54:31.243Z">
+<meta property="article:modified_time" content="2020-11-07T08:04:21.782Z">
 <meta property="article:author" content="Tainic-Kang">
 <meta property="article:tag" content="Elasticsearch">
 <meta property="article:tag" content="kibana">
@@ -193,8 +193,7 @@
 <p><img src="/gallary/es/7.png" alt></p>
 <p>但是最后会报错 ElasticsearchException[X-Pack is not supported and Machine Learning is not available for [windows],</p>
 <p><img src="/gallary/es/8.png" alt></p>
-<p>ES在6.0版本之后都默认带了</p>
-<p>插件，但是windows不支持，因此需要在配置文件config/elasticsearch.yml 中添加一行配置，之后再重新启动。</p>
+<p>ES在6.0版本之后都默认带了<a href="https://www.elastic.co/guide/en/x-pack/current/xpack-introduction.html" target="_blank" rel="noopener">X-pack</a>插件，但是windows不支持，因此需要在配置文件config/elasticsearch.yml 中添加一行配置，之后再重新启动。</p>
 <figure class="highlight yaml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">xpack.ml.enabled:</span> <span class="hljs-literal">false</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="/gallary/es/9.png" alt></p>
@@ -547,7 +546,7 @@
         
         <article class="media">
             
-            <a href="/2020/11/07/windows%E4%B8%8B-Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="media-left">
+            <a href="/2020/11/07/Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Elasticsearch + Kibana + elasticsearch-head 环境搭建">
                 </p>
@@ -556,7 +555,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-07T07:10:05.753Z">2020-11-07</time></div>
-                    <a href="/2020/11/07/windows%E4%B8%8B-Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Elasticsearch + Kibana + elasticsearch-head 环境搭建</a>
+                    <a href="/2020/11/07/Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Elasticsearch + Kibana + elasticsearch-head 环境搭建</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a>
                     </p>
@@ -780,7 +779,7 @@
         
         <article class="media">
             
-            <a href="/2020/11/07/windows%E4%B8%8B-Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="media-left">
+            <a href="/2020/11/07/Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Elasticsearch + Kibana + elasticsearch-head 环境搭建">
                 </p>
@@ -789,7 +788,7 @@
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-07T07:10:05.753Z">2020-11-07</time></div>
-                    <a href="/2020/11/07/windows%E4%B8%8B-Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Elasticsearch + Kibana + elasticsearch-head 环境搭建</a>
+                    <a href="/2020/11/07/Elasticsearch-+-Kibana-+-elasticsearch-head-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Elasticsearch + Kibana + elasticsearch-head 环境搭建</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/%E5%B7%A5%E4%BD%9C/">工作</a>
                     </p>
